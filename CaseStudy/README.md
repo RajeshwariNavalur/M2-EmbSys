@@ -6,6 +6,9 @@
 
 
 # Block Daigram of embedded system in a Induction Stove(cook)
+![case study](https://user-images.githubusercontent.com/98839182/154834134-520da511-49fd-406a-82b2-adc671a01ce6.PNG)
+
+
 
 * Microcontroller : The basic controlling block the system
 * Power Supply switch: To get the input power in order to the run machine.
