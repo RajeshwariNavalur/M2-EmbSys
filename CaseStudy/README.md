@@ -5,9 +5,13 @@
 * ##  Basic working idea of induction stove
 * The Induction Stove\cooktop consists of a surface( usually made of glass), under which  there is a coiled metal induction element. A magnetic field is created as electricity flows into the coils. Within this field the cookwares are placed, these ferromagnetic cookware functions as the second conductor, and a current is produced onto it.This generates the Eddy currents  within the cookware, which has its own magnetic field. This in turn opposes the induction element's currents. Energy produced by the opposing magnetic fields is released in the form of heat within the cookware (or vessel), due to this the contents in the cookware also gets heated.
 
+![image](https://user-images.githubusercontent.com/98839182/154838130-46945582-1240-45e6-977f-aed2dd4fa170.PNG)
+
 
 
 ## Block Diagram of embedded system in a Induction Stove(cook)
+![case study](https://user-images.githubusercontent.com/98839182/154838136-a203cebd-019b-4678-b0f0-a49c12629a5e.PNG)
+
 
 
 * Microcontroller :  The basic controlling block the system
@@ -23,6 +27,7 @@
 Induction Coil :  Use to produce the required heat.
 
 # V Model
+![Vmodel](https://user-images.githubusercontent.com/98839182/154838144-54c6a596-d881-4a77-a6fc-0df5cc9eb75f.PNG)
 
 ## Requirements
 * The primary step in any project/case study is to collect the user and market Requirements, which are used to build the objectives of the project
