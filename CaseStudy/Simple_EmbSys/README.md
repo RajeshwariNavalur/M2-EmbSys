@@ -2,11 +2,7 @@
 
 # Case study on automated temperature-controlled fan
  
-* to develop an low cost, user friendly automated temperature-controlled fan regulator which regulates the speed of fan based on temperature, reduces power consumption and also responses for user entry
-
-
-
-
+* To develop an low cost, user friendly automated temperature-controlled fan regulator which regulates the speed of fan based on temperature, reduces power consumption and also responses for user entry
 
 
 # V Model
@@ -26,14 +22,21 @@
 
  ## System Design
  * This phase consists of block diagram, Flow chart, Behavioural diagram etc of the whole system.
- * Here the entire Induction stove is designed.
+
  
- # Block Diagram of embedded system in a Induction Stove(cook)
+ # Block Diagram 
 ![Fan case study](https://user-images.githubusercontent.com/98839182/155317347-f24db774-ff25-44eb-9f48-94c157783b61.PNG)
+
+* Microcontroller : This is the heart of embedded system. This the the basic controlling block of the product.
+* Temperature and humidity sensor : This sensor is used to sense the room temperature and humidity the output is fed to the microcontroller.
+* Remote Control : With  help of this block the microcontroller recives the data from user.
+* Power Supply : Power for the working of fan is drawn throuch this circuit. 
+* EEPROM: Used to store the sensor data and user entered data.
+* speed regulator: This is used to monitor and control the speed of the fan.
 
  ## Sub System Design
  * In this phase each subsystems are designed and built
- * example: In this case study, Temperature sensor sub system, heat generation sub system, etc are designed and built
+ * example: In this case study, Temperature sensor sub system, Remote control sub system, etc are designed and built
  * white box testing is also carried out in this stage.
  ## Code
  * During this phase code for different functionality is written and executed for the required application.
@@ -46,7 +49,7 @@
 * In this phase, all the susbsystems and codes are collaborated or integrated and test is carried out. If all the tests are passed then the system is sent for validation.
 
 ## Validation
-* The main objectives of the product (Induction Stove)  are validated, that is all the high level and low level requirements are tested, if the product passes all these tests then it is ready for the market, else it is sent back for re examining
+* The main objectives of the product are validated, that is all the high level and low level requirements are tested, if the product passes all these tests then it is ready for the market, else it is sent back for re examining
  
 
 
