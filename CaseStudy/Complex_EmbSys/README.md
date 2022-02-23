@@ -9,24 +9,23 @@
 
 
 
-
-
 # V Model
 ![Vmodel](https://user-images.githubusercontent.com/98839182/154838144-54c6a596-d881-4a77-a6fc-0df5cc9eb75f.PNG)
 
 ## Requirements
 * The primary step in any project/case study is to collect the user and market Requirements, which are used to build the objectives of the project
 ## * High Level Requirements
-* Switching circuit.
-* Cooking Options.
-* Detection of Vessel.
-* Producing enough amount of heat to cook.
+
+* Shall take input from the user based on Cooking Options.
+* Shall Detected  Vessel(whether placed on stove or not).
+* Shall  Producing enough amount of heat to cook.
+* Shall take the power from Switching circuit.
 
  
  ## * Low Level Requirements
- * Led/lcd  Display.
- * Time changing option.
- * Temperature changing option.  
+ * Shall display the user option on Led/lcd  Display.
+ * Shall provide time changing option.
+ * Shall provide Temperature changing option.  
 
  ## System Design
  * This phase consists of block diagram, Flow chart, Behavioural diagram etc of the whole system.
@@ -37,7 +36,7 @@
 
 
 
-* Microcontroller :  The basic controlling block the system
+* Microcontroller :This is the heart of the system. Here it is the basic controlling block the system.
 * Power Supply switch :  Used  to get the input power in order to the run machine.
 * Rectifier circuit : Used for current conversion that is from AC to DC and Automatic voltage Regulator for limiting the possible  radiation hazards
 * User entry block :  It is used to take the input from the user with the help of touch sensor. example: commercially available induction stove\cook have the options like: pan, curry, milk, water, idly, tea etc.There are also some options to set the required time and to increase or decrease heat
@@ -67,4 +66,8 @@
 * The main objectives of the product (Induction Stove)  are validated, that is all the high level and low level requirements are tested, if the product passes all these tests then it is ready for the market, else it is sent back for re examining
  
 
+
+# Application
+* The Induction stove is used for domestic applications.
+* It encourage sustainable and pollution free cooking because there is no use of wood or fossil fuels
 
