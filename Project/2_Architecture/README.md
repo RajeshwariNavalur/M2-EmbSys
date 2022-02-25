@@ -12,7 +12,7 @@
 ![case study](https://user-images.githubusercontent.com/98839182/154838136-a203cebd-019b-4678-b0f0-a49c12629a5e.PNG)
 
 
-
+## Sensors ans Actuator used
 * Microcontroller :This is the heart of the system. Here it is the basic controlling block the system.
 * Power Supply switch :  Used  to get the input power in order to the run machine.
 * Rectifier circuit : Used for current conversion that is from AC to DC and Automatic voltage Regulator for limiting the possible  radiation hazards
