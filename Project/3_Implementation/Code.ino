@@ -1,6 +1,6 @@
+//Arduino code
 
 
-// include the library code:
 #include <LiquidCrystal.h>
 #define motorPin 50
 #define sensorPin 0
@@ -11,12 +11,11 @@ int x=200;
 
 
 
-// initialize the library by associating any needed LCD interface pin
-// with the arduino pin number it is connected to
+// initialize pins for interconnection of LCD with the arduino 
 const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
-// constants won't change. They're used here to set pin numbers:
-const int buttonPin = 6; // the number of the pushbutton pin
+// pushbutton pins
+const int buttonPin = 6; 
 const int buttonPin7 = 7;
 const int buttonPin8 = 8;
 const int buttonPin9 = 9;
@@ -26,7 +25,7 @@ const int buttonPin53 = 53;
 const int buttonPin43 = 43;
 
 
-// variables will change:
+// variables 
 int buttonState = 0;
 int buttonState7 = 0;
 int buttonState8 = 0;
@@ -40,13 +39,10 @@ int buttonState43 = 0;
 void setup() {
   // set up the LCD's number of columns and rows:
   lcd.begin(16, 2);
-  // Print a message to the LCD.
-  lcd.print("Induction ON");
+ 
+  lcd.print("Induction ON"); //display when power is on
   delay(1000);
 
-
-
-  // initialize the pushbutton pin as an input:
   pinMode(buttonPin, INPUT);
   pinMode(buttonPin7, INPUT);
   pinMode(buttonPin8, INPUT);
@@ -64,14 +60,6 @@ void setup() {
 
 
 void loop() {
-  // set the cursor to column 0, line 1
-  // (note: line 1 is the second row, since counting begins with 0):
-  //lcd.setCursor(0, 1);
-  // print the number of seconds since reset:
-  // lcd.print(millis() / 1000);
-
-
-  // read the state of the pushbutton value:
   buttonState = digitalRead(buttonPin);
   buttonState7 = digitalRead(buttonPin7);
   buttonState8 = digitalRead(buttonPin8);
@@ -87,22 +75,19 @@ void loop() {
   if (buttonState == HIGH)
   {
     lcd.setCursor(1, 0);
-    // lcd.clear();
-    // lcd.print("vessel");
-    // delay(1000);
-    digitalWrite(motorPin, HIGH);
-    digitalWrite(ledPin, HIGH);
+    digitalWrite(ledPin, HIGH);  // LED is ON to indicate vessel is placed
+    digitalWrite(motorPin, HIGH); // cooling circuit is ON when vessel is placed and cooking is started 
+    
 
 
     if (buttonState7 == HIGH)
     {
+      // When fry option is selected
       lcd.clear();
-      lcd.print("Fry");
-
+      lcd.print("Fry");  
       lcd.setCursor(0, 1);
-      // print the number of seconds since reset:
-      lcd.print(millis() / 1000);
-            heat();
+      lcd.print(millis() / 1000); // print time
+      heat();               // function called to increase or decrease heat
      lcd.print(" Heat: ");
      lcd.print(x);
       delay(1000);
@@ -110,15 +95,15 @@ void loop() {
 
   if (buttonState8 == HIGH)
     {
+      // When water option is selected
       lcd.clear();
       lcd.print("water");
-
       lcd.setCursor(0, 1);
       // print the number of seconds since reset:
-      lcd.print(millis() / 1000);
+      lcd.print(millis() / 1000); // display time
       
-      heat();
-     lcd.print(" Heat: ");
+      heat(); // function called to increase or decrease heat
+     lcd.print(" Heat: "); 
      lcd.print(x);
 
       delay(1000);
@@ -127,13 +112,13 @@ void loop() {
 
     if (buttonState9 == HIGH)
     {
+      // When milk option is selected
       lcd.clear();
       lcd.print("milk");
-
       lcd.setCursor(0, 1);
       // print the number of seconds since reset:
       lcd.print(millis() / 1000);
-           heat();
+      heat(); // function called to increase or decrease heat
      lcd.print(" Heat: ");
      lcd.print(x);
      
@@ -143,6 +128,7 @@ void loop() {
 
     if (buttonState10 == HIGH)
     {
+      // When preasure cooker option is selected
       lcd.clear();
       lcd.print("preasure cooker");
 
@@ -150,17 +136,16 @@ void loop() {
       // print the number of seconds since reset:
       lcd.print(millis() / 1000);
      
-      heat();
+      heat(); // function called to increase or decrease heat
      lcd.print(" Heat: ");
      lcd.print(x);
 
       delay(1000);
-
-     
     }
 
     if (buttonState13 == HIGH)
     {
+      // When curry option is selected
       lcd.clear();
       lcd.print("curry");
 
@@ -169,60 +154,52 @@ void loop() {
       lcd.print(millis() / 1000);
      
     
-      heat();
+      heat();// function called to increase or decrease heat
      lcd.print(" Heat: ");
      lcd.print(x);
 
       delay(1000);
     }
-
-
-
   }
-  else {
-    // turn LED off:
-    digitalWrite(ledPin, LOW);
+
+  else 
+  { 
+    // When vessel is not placed or removed
+    
+    digitalWrite(ledPin, LOW); // turn LED off:
     lcd.setCursor(1, 0);
     lcd.clear();
     lcd.print("---");
     delay(1000);
-    digitalWrite(motorPin, LOW);
+    digitalWrite(motorPin, LOW);// // turn cooling circuit off:
   }
-
-//digitalWrite(motorPin, HIGH);
-
 }
+
 void heat()
 {
- 
   if (buttonState43 == HIGH && x <=2000)
   {
-   
-    x = x + 200;
+    x = x + 200; // increase heat
   }
     if (buttonState53 == HIGH &&  x >= 200)
   {
-   
-    x = x - 200;
+    x = x - 200; // decrease heat
   }
 
 }
 void temp()
 {
+  // function to read temperature of water and milk
   double optvoltage, thermRes, therln, temp;
-  sensorValue = analogRead(sensorPin); // read the sensor
+  sensorValue = analogRead(sensorPin); // read the temperature
   optvoltage = ( (sensorValue * 5.0) / 1023.0 );
-  thermRes= ( ( 5 * ( 10.0 / optvoltage ) ) - 10 ); /* Resistance in kilo ohms */
- thermRes= thermRes* 1000 ; /* Resistance in ohms   */
- therln  = log(thermRes);
- 
+  thermRes= ( ( 5 * ( 10.0 / optvoltage ) ) - 10 ); 
+  thermRes= thermRes* 1000 ;
+  therln  = log(thermRes);
   temp= ( 1 / ( 0.001129148 + ( 0.000234125 * therln ) + ( 0.0000000876741 * therln * therln * therln ) ) ); /* Temperature in Kelvin */
   temp= temp - 273.15+80;
    lcd.clear();
-  
   lcd.print(temp);
-  lcd.print("  Celsius ");
+  lcd.print("  Celsius "); // Display temperature
   delay(1000);
-  
-
 }
