@@ -8,7 +8,7 @@
 |3	|Cooling Circuit|	Vessel Push Button ON|	Rotation of DC motor| 	Rotation of DC motor| 	Pass|
 |5	|Display Heat value And Timing|	User entry| 	Display timing and heat value|	Displayed timing and heat value|	pass|
 
-##Low level Test plan
+## Low level Test plan
 |Test ID|	Description	Expected| Input|	Expected Output|	Actual output|	Status|
 |----|----|---|---|---|---|
 |1	|Read temperature of milk and water|	Temperature|	Temperature display	|Temperature display|	Passed|
