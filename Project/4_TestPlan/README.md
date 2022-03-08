@@ -12,8 +12,8 @@
 |Test ID|	Description	Expected| Input|	Expected Output|	Actual output|	Status|
 |----|----|---|---|---|---|
 |1	|Read temperature of milk and water|	Temperature|	Temperature display	|Temperature display|	Passed|
-|2|	Time calculating|	User entry and inbuilt timer|	Buzzer	|buzzer	|Passed|
-|3|	Exact LcD Display when input is changed|	Changes made|	Changes display on LCD|	Changes displayed on LCD|	passed|
+|2|	Time calculating|	User entry and inbuilt timer|	Buzzer	|Buzzer	|Passed|
+|3|	Quick LCD Display when inputs are  changed|	Changes made|	Changes display on LCD|	Changes displayed on LCD|	passed|
 
 
 
