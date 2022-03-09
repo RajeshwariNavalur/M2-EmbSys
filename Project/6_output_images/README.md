@@ -1,9 +1,14 @@
 # Results
 ## LCD Display when power is on
-![Screenshot (95)](https://user-images.githubusercontent.com/98839182/157316566-df2a0c21-f9b3-4236-9e30-eef13896bedc.png)
+![ON](https://user-images.githubusercontent.com/98839182/157380329-a609c5bd-69b3-445b-a60b-ed52f3a5590a.png)
 
 ## LED Blink when vessel is placed and cooling circuit
-![vessel](https://user-images.githubusercontent.com/98839182/157316797-074071db-03bc-4a51-8803-2dd4a0fbcb2c.PNG)
+![vessel](https://user-images.githubusercontent.com/98839182/157380369-3827b56f-dfaf-4bea-a594-8cc1458ebed7.png)
 
 ## User Entry : Fry Option
-![fry](https://user-images.githubusercontent.com/98839182/157316715-e7df96b3-2d56-4d2d-981d-20773fb0c641.PNG)
+![FRY](https://user-images.githubusercontent.com/98839182/157380400-599bedeb-3aa9-453d-8cd0-cad21a5de153.png)
+
+
+## Temperature sensing of water or milk
+![temp](https://user-images.githubusercontent.com/98839182/157380343-0e6fa198-6210-417c-b7b9-69fe41942291.png)
+
