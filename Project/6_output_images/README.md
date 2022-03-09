@@ -10,5 +10,6 @@
 
 
 ## Temperature sensing of water or milk
-![temp](https://user-images.githubusercontent.com/98839182/157380343-0e6fa198-6210-417c-b7b9-69fe41942291.png)
+![temperature](https://user-images.githubusercontent.com/98839182/157381564-7ce8252a-e102-4be2-bb1c-13c91a098d46.png)
+
 
